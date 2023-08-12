@@ -1,0 +1,167 @@
+<!-- Create a new website using HTML and Bootstrap. The website must include the following:
+At least 2 pages.
+A Bootstrap navbar, table, and form.
+Bootstrap grid used throughout to format elements
+Elements should stack vertically when the window is small -->
+
+<!-- Website idea: The Dish: an interactive food blog type site, users can find and share recipes along with pics/vids -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dish</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+</head>
+<!-- class for background color -->
+<body class="bg-warning"> 
+    <div class="container bg-light">
+        <!-- <div class="d-flex align-items-center justify-content-between"> -->
+        <div class="d-flex align-items-center justifty-content-between">
+            <img
+            src="DishImages/Logo3.png"
+            class="img-fluid"
+            width="85%"
+            style="height:35vh"
+            />
+    <div class="d-flex flex-column align-items-end">
+            <a href="#" class="btn btn-outline-success mr-2">Login</a>
+            <a href="#" class="btn btn-outline-success">Create Account</a>
+        </div>
+        </div>
+        <!-- added class img-fluid so image would move with screen size -->
+
+<!-- Next to logo I want to add in right corner option to sign in or create account, so i used d-flex to align -->
+
+<hr class="mb-3 bg-warning">
+<!-- headers -->
+<div class="container ">
+        <h1 class="text-center display-4">It's Time to DISH!</h1>
+        <p class="text-center lead mb-5">No more gatekeeping those recipes, it's time to dish the details on YOUR favorite dish! Join The Dish! community to start your online cookbook today!</p>
+</div>
+<!-- navbar that expands for lg screens with light color scheme, small screens toggles to nav menu, current page is darker -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fs-5 active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5" href="submit.html">Submit a Dish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fs-5 dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Social Media
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <!-- used bootstrap utilites to add social logo images that are inline/same size as text drip down -->
+               <li><a class="dropdown-item" href="https://www.facebook.com/">Facebook <img src="DishImages/fb.png" class="d-inline img-fluid" style="width: 16px; height: 16px;"></a></li>
+               <li><a class="dropdown-item" href="https://www.instagram.com">Instagram <img src="DishImages/insta.png"class="d-inline img-fluid" style="width: 16px; height: 16px;"> </a></li>
+               <li><a class="dropdown-item" href="https://www.tiktok.com">TikTok <img src="DishImages/tiktok.png" class="d-inline img-fluid" style="width: 16px; height: 16px;"></a></li>
+            </ul>
+            <!-- no JS to go along, just added for fun, so nothing really pulls from dropdown -->
+          </li>
+        </ul>
+         <!--form to use keywords to search for recipes  -->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Find a Dish" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+`<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-center text-success display-2 mb-4">Featured Dishes</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md">
+        <div id="card-1" class="card bg-light">
+            <img
+            src="DishImages/breakfast.jpeg"
+            class="card-img-top"
+            width="100"
+            height="400"
+            />
+            <div class="card-body">
+            <h5 class="card-title">Everything Breakfast Toast</h5>
+            <p class="text-muted">Avocado toast meets its match with this healthy, hearty breakfast toast.</p>
+            <p>Submitted by 
+                <a href="#" class="username">CleanEats56</a>
+            </p>
+            <!-- using d-flex to create a child container so my button can float to right inside card -->
+            <div class="d-flex justify-content-end">
+            <a href="#" class="btn btn-outline-success btn-md">Full Recipe</a>
+        </div>
+        </div>
+    </div>
+</div>
+    <div class="col-md">
+    <div id="card-2" class="card bg-light">
+        <img
+        src="DishImages/lasagna.webp"
+        class="card-img-top"
+        width="100"
+        height="400"
+        />
+        <div class="card-body">
+        <h5 class="card-title">"Lazy" Lasagna</h5>
+        <p class="text-muted">This classic recipe has one twist: it's made in a crockpot!</p>
+        <p>Submitted by 
+            <a href="#" class="username">FrankieFoodie</a>
+        </p>
+        <div class="d-flex justify-content-end">
+        <a href="#" class="btn btn-outline-success btn-md">Full Recipe</a>
+    </div>
+    </div>
+</div>
+</div>
+    <div class="col-md">
+    <div id="card-3" class="card bg-light">
+        <img
+        src="DishImages/funfetti.jpg"
+        class="card-img-top"
+        width="100"
+        height="400"
+        />
+        <div class="card-body">
+        <h5 class="card-title">FUNNNfetti Cake</h5>
+        <p class="text-muted">Check out the recipe to see what makes this classic extra FUN and extra delicious!</p>
+        <p>Submitted by 
+            <a href="#" class="username">CakeDr85</a>
+        </p>
+        <div class="d-flex justify-content-end">
+        <a href="#" class="btn btn-outline-success btn-md">Full Recipe</a>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+   
+
+ 
+<footer class="text-center ">Molly Riordan Promineo Tech ©️2023</footer>
+
+<!-- div for main container, don't delete -->
+</div>
+
+    <!-- so my navbar drop down actually works, although there's no real socials :) -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
+
+
+
